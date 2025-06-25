@@ -7,6 +7,15 @@ import CoreGraphics
 // Some code taken from https://github.com/nuance-dev/achico/blob/master/Achico/Processor/FileProcessor.swift
 // which uses MIT License
 
+// MARK: - Compression Result
+
+struct PDFCompressionResult: Codable {
+    let originalSize: Int64
+    let compressedSize: Int64
+    let compressedURL: String
+    let savedPercentage: Int
+}
+
 // MARK: - Main Compression Function
 
 @raycast
